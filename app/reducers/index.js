@@ -1,11 +1,9 @@
-// @flow
 import { combineReducers } from 'redux';
-import { routerReducer as router } from 'react-router-redux';
-import counter from './counter';
-
+import BooksReducer from './reducer_books';
+import ToolClickReducer from './reducer_tool_click';
 const rootReducer = combineReducers({
-  counter,
-  router,
+  books: BooksReducer,
+  clickedTool: ToolClickReducer
 });
 
 export default rootReducer;
